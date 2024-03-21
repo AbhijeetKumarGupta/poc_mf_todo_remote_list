@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContainer, EmptyList, ListTitle } from "./style";
+import { EmptyList } from "./style";
 import Card from '../../components/todoCard';
 
 function List(props) {
