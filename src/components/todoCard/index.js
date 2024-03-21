@@ -17,7 +17,6 @@ const Card = (props) => {
 
   return (
     <CardWrapper isComplete={props?.data?.completed}>
-      {console.log(props?.data?.title)}
       <TodoMessage>
         {props?.data?.title}
       </TodoMessage>

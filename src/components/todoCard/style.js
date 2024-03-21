@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardWrapper = styled.div`{
+export const CardWrapper = styled.div`
   display: flex;
   border-radius: 10px;
   width: 20%;
@@ -11,17 +11,17 @@ export const CardWrapper = styled.div`{
   margin-bottom: 10px;
   overflow-y: scroll;
   gap: 5px;
-  background-color: ${(props) => props?.isComplete ? 'green' : '#4b9cd3'};
-}`
-
+  background-color: ${(props) => props?.isComplete ? 'green' : '#4b9cd3'} !important;
+`
 export const TodoMessage = styled.div`
-color: white;
+  color: white;
   width: 95%;
 `
 
 export const ButtonContainer = styled.div`
   display: flex !important;
   flex-direction: column;
+  width: 100%;
   height: 100%;
   justify-content: center;
 
