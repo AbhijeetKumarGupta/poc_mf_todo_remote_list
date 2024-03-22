@@ -3,17 +3,7 @@ import { ButtonContainer, DoneButton, CardWrapper, OpenButton, RemoveButton, Tod
 
 const Card = (props) => {
 
-  const handleRemove = (e) => {
-  };
-
-  const handleMarkAsDone = (e) => {
-  }
-
-  const handleMarkAsOpen = (e) => {
-  }
-
-  const handleView = (e) => {
-  }
+  const {handleRemove, handleMarkAsDoneOrOpen, handleView} = props
 
   return (
     <CardWrapper isComplete={props?.data?.completed}>
@@ -30,14 +20,14 @@ const Card = (props) => {
         <DoneButton 
           id={`${props?.data?.id}`}
           disabled={props?.data?.completed}
-          onClick={handleMarkAsDone}
+          onClick={(e) => handleMarkAsDoneOrOpen(e,true)}
         >
           Mark as done
         </DoneButton>
         <OpenButton 
           id={`${props?.data?.id}`}
           disabled={!props?.data?.completed}
-          onClick={handleMarkAsOpen}
+          onClick={(e) => handleMarkAsDoneOrOpen(e,false)}
         >
           Mark as open
         </OpenButton>
