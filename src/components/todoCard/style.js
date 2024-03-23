@@ -48,4 +48,5 @@ export const OpenButton = styled.button`
 
 export const ViewButton = styled.button`
   background-color: white;
+  cursor: ${(props) => props?.isDummy ? 'not-allowed' : 'pointer'} !important;
 `

@@ -33,8 +33,9 @@ const Card = (props) => {
         </OpenButton>
         <ViewButton 
           id={`${props?.data?.id}`}
-          onClick={handleView}
+          onClick={(e) => handleView(e,`/${e.target.id}`)}
           disabled={props?.data?.isDummy}
+          isDummy={props?.data?.isDummy}
         >
           View{props?.data?.isDummy ? '(Dummy Data)' : ''}
         </ViewButton>
