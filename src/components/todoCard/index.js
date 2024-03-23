@@ -33,7 +33,7 @@ const Card = (props) => {
         </OpenButton>
         <ViewButton 
           id={`${props?.data?.id}`}
-          onClick={(e) => handleView(e,`/${e.target.id}`)}
+          onClick={(e) => handleView(e,`/poc_module_federation_todo_host/${e.target.id}`)}
           disabled={props?.data?.isDummy}
           isDummy={props?.data?.isDummy}
         >
